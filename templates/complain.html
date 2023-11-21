@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complaint Page</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image:url(https://i.postimg.cc/fTGnjzKd/e1b6b166166841-5b0d3a7ba002e.jpg) ;
+    background-repeat: no-repeat;
+    background-attachment: static;
+    background-size: cover;
+}
+
+h2 {
+    color: #000000;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+
+.container {
+    padding: 16px;
+    background-color: rgb(93, 93, 93);
+    border-radius: 25px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#btn {
+    align-self: center;
+    width: 5rem;
+    border-radius:32px;
+
+}
+</style>
+    <h2>Enter Your Complain</h2>
+    <div class="container">
+    <form method="POST">
+        <label for="crime_type">Type of Crime:</label><br>
+        <input type="text" id="crime_type" name="crime_type" required><br>
+        <label for="crime_date">Date of Crime:</label><br>
+        <input type="date" id="crime_date" name="crime_date" value="2023-12-31" required><br>
+        <label for="crime_location">Location of Crime:</label><br>
+        <input type="text" id="crime_location" name="crime_location" required><br>
+        <label for="crime_description">Description of Crime:</label><br>
+        <textarea id="crime_description" name="crime_description" required></textarea><br>
+        <input id="btn" type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

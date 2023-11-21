@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+    *{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    body {
+            background-image: url(https://i.postimg.cc/R0G4PjV9/2015409.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    .container {
+        width: 80%;
+        margin: auto;
+        font-family: Arial, sans-serif;
+    }
+
+    .header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav li {
+        margin-left: 20px;
+    }
+
+    .nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav a:hover {
+        color: #ccc;
+    }
+
+    .banner {
+        margin-top: 40px;
+        background-image: url(https://i.postimg.cc/0yprdk6B/Cool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-18.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner h1 {
+        color: white;
+        font-size: 48px;
+        text-shadow: 2px 2px 4px black;
+    }
+
+    .main {
+        padding: 40px;
+    }
+
+    .main h2 {
+        color: #ffffff;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .main p {
+        color: #000000;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        background-size: cover;
+        background-color: #745252;
+        border-radius: 15px;
+        padding: 10px;
+        padding-left: 15px;
+    }
+
+    .main ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main li {
+        width: 33%;
+        padding: 20px;
+    }
+
+    .main li img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .main li img:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .main li h3 {
+        color: white;
+        mix-blend-mode: difference;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .main li p {
+        color: #000000;
+        font-size: 16px;
+        line-height: 1.5;
+        
+    }
+
+    .footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 15px;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+
+    .footer ul {
+        list-style: none;
+        display: flex;
+    }
+
+    .footer li {
+        margin-left: 20px;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        color: #ccc;
+    }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div class='header'>
+            <div class='logo'>Crime Management System</div>
+            <ul class='nav'>
+                <li><a href='#'>Home</a></li>
+                <li><a href='{{url_for('signup')}}'>Sign Up</a></li>
+                <li><a href='{{url_for('login')}}'>Login</a></li>
+                <li><a href='{{url_for('adminlogin')}}'>Police Admin</a></li>
+            </ul>
+        </div>
+        <div class='banner'>
+            <h1>Register And Manage Crime Records</h1>
+        </div>
+        <div class='main'>
+            <h2>What is Crime Management System?</h2>
+            <p>Crime Management System is a web-based application that helps police record and manage crime types they
+                receive at their stations on daily basis. The project has CRUD (Create, Read, Update, and Delete)
+                Operation functionalities.</p>
+            <p>The system allows data storage and criminal record interchange between the police. It also provides
+                timely and accurate information on offenders, complaints, FIRs, charge sheets, prisoner records, etc.
+                The system is designed to improve the efficiency and effectiveness of the police security measures in
+                keeping criminal records, and to provide the crime investigator(s) with relevant information about a
+                particular crime in a specified location .</p>
+            <h2>What are the features of Crime Management System?</h2>
+            <ul>
+                <li> <img src='https://i.postimg.cc/gkf1bRzn/186828-509x337r1-Complaint.jpg'>
+                    <h3>Online Complaint Application</h3>
+                    <p>The system allows the public to register their complaints online and get a unique complaint
+                        number. The system also notifies about the status of their complaint and the
+                        action taken by the police.</p>
+                </li>
+                <li> <img src='https://i.postimg.cc/KvH3GGwK/criminal-record.jpg'>
+                    <h3>Crime Record Interchange</h3>
+                    <p>The system enables the police to share and access crime records across different stations and
+                        states. The system also facilitates the electronic provision of criminal record to crime
+                        investigator(s). The system ensures the security and confidentiality of the data by using
+                        encryption and authentication techniques.</p>
+                </li>
+                <li> <img src='https://i.postimg.cc/s2qRx8y4/OIP.jpg'>
+                    <h3>Crime Analysis and Reporting</h3>
+                    <p>The system provides various tools and reports for analyzing and visualizing the crime data. The
+                        system helps the police to identify the crime patterns, trends, hotspots, and suspects. The
+                        system also generates various reports such as crime statistics, crime types, crime locations,
+                        etc.</p>
+                </li>
+            </ul>
+        </div>
+        <div class='footer'>
+            <p> 2023 Crime Management System.</p>
+            <ul>
+                <li><a href='#'>Privacy Policy</a></li>
+                <li><a href='#'>Terms of Use</a></li>
+                <li><a href='#'>Feedback</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image:url(https://i.postimg.cc/xCymTJWS/wp9764009.jpg) ;
+    background-repeat: no-repeat;
+    background-attachment: static;
+    background-size: cover;
+}
+
+h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+#btn_submit {
+    align-self: center;
+    width: 5rem;
+    border-radius:32px;
+
+}
+
+#btn_submit:hover {
+
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+    background-color: rgb(93, 93, 93);
+    border-radius: 25px;
+    max-width: 300px;
+    margin: 0 auto;
+    
+}
+    </style>
+    <h2>Register</h2>
+<div class="container">
+    <form action="/" method="POST">
+        First Name: <input type="text" name="fname"><br>
+        Last Name: <input type="text" name="lname"><br>
+        Works On: <input type="number" name="works_on"><br>
+        <input id='btn_submit' type="submit" name="button" value="Submit">
+    </form>
+</div>
+</body>

@@ -1,0 +1,101 @@
+<html>
+<head>
+  <title>Janja Police Stations</title>
+  <style>
+    .sidebar {
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: black;
+      overflow-x: hidden;
+      padding-top: 20px;
+      transition: width 0.5s;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 16px;
+      padding-left: 50px;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      text-shadow: 0 0 5px #ffffff;
+      font-size: 20px;
+      transition: 0.2s;
+      /* background-color: rgba(60, 60, 60, 0.858); */
+    }
+
+    .sidebar.collapsed {
+      width: 50px;
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 40px;
+      margin-left: 200px;
+    }
+
+  button{
+        border-radius: 20px;
+        margin-left: 30px;
+        padding-left: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .grid-container {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="{{url_for('police_dept')}}">Home</a>
+    <a href="{{url_for('officers')}}">All officers</a>
+    <a href="javascript:history.go(-1)">Back</a>
+    <button onclick="toggleSidebar()">☰ Toggle Bar</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="item">   
+       <table>
+      {% for user in userDetails %}       
+      <tr>
+          <br>{{ user[0] }} <br><br>
+      </tr>
+      {%endfor%}
+ </table> 
+  
+  
+  
+  <!-- </div>
+    <div class="grid-item">Police Station 2</div>
+    <div class="grid-item">Police Station 3</div>
+    <div class="grid-item">Police Station 4</div>
+    <div class="grid-item">Police Station 5</div>
+    <div class="grid-item">Police Station 6</div>
+    <div class="grid-item">Police Station 7</div>
+    <div class="grid-item">Police Station 8</div>
+
+  </div>  -->
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('collapsed');
+      var gridContainer = document.querySelector('.grid-container');
+      if (sidebar.classList.contains('collapsed')) {
+        gridContainer.style.marginLeft = '50px';
+      } else {
+        gridContainer.style.marginLeft = '200px';
+      }
+    }
+  </script>
+</body>
+</html>

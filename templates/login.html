@@ -1,0 +1,72 @@
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image:url(https://i.postimg.cc/fTGnjzKd/e1b6b166166841-5b0d3a7ba002e.jpg) ;
+    background-repeat: no-repeat;
+    background-attachment: static;
+    background-size: cover;
+}
+
+h2 {
+    color: #000000;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+#btn_submit {
+    align-self: center;
+    width: 5rem;
+    border-radius:32px;
+
+}
+
+#btn_submit:hover {
+
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+    background-color: rgb(93, 93, 93);
+    border-radius: 25px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+a{
+    align-items: center;
+    padding: 3px;
+    border-radius: 8px;
+    font-size:12px;
+    color: black;
+    background-color: aliceblue;
+}
+    </style>
+    <h2>Login</h2>
+<div class="container">
+    <form action="{{url_for('login')}}" method="POST">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        <input id='btn_submit' type="submit" name="button" value="Submit"><br><br><br>
+    </form>
+    <a href="{{url_for('signup')}}">Sign up</a>
+</div>
+</body>

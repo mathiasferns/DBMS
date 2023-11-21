@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <th>USER ID</th>
+        <th>FIRST NAME</th>
+        <th>LAST NAME</th>
+        <th>WORKS ON</th>
+    </tr>
+    {% for user in userDetails %}       
+    <tr>
+        <td>{{ user[0] }}</td>
+        <td>{{ user[1] }}</td>
+        <td>{{ user[2] }}</td>
+        <td>{{ user[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
